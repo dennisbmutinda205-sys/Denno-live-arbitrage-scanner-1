@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: live-arbitrage-radar
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MOCK_MODE
+        value: "false"
+      - key: POLL_MS
+        value: "5000"
+      - key: TRADE_USDT
+        value: "50"
